@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu & Contact | Nordic Roasts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Nordic Roasts</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu & Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="menu-section">
+      <h2 class="section-title">Our Coffee Menu</h2>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="hot">Hot Drinks</button>
+        <button class="filter-btn" data-category="cold">Cold Brews</button>
+      </div>
+
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Drink</th>
+            <th>Notes</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="menuBody">
+          <tr data-category="hot">
+            <td>Espresso</td>
+            <td>Dark chocolate, hazelnut, rich crema</td>
+            <td>$3.00</td>
+          </tr>
+          <tr data-category="hot">
+            <td>Flat White</td>
+            <td>Velvety microfoam over a double ristretto</td>
+            <td>$4.20</td>
+          </tr>
+          <tr data-category="hot">
+            <td>V60 Pour Over</td>
+            <td>Ethiopian Yirgacheffe, jasmine & bergamot</td>
+            <td>$4.80</td>
+          </tr>
+          <tr data-category="cold">
+            <td>Classic Cold Brew</td>
+            <td>Steeped 18 hours, smooth caramel finish</td>
+            <td>$4.50</td>
+          </tr>
+          <tr data-category="cold">
+            <td>Iced Oat Latte</td>
+            <td>Double espresso, chilled oat milk over ice</td>
+            <td>$4.75</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="section-title">Book a Table / Contact Us</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Jan Novak">
+          <small class="error-msg" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="e.g. jan@example.com">
+          <small class="error-msg" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message or Reservation Details *</label>
+          <textarea id="message" name="message" rows="4" placeholder="Table for 2 at 4:00 PM..."></textarea>
+          <small class="error-msg" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formSuccess" class="success-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nordic Roasts Coffee Co. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
